@@ -8,7 +8,6 @@ Unsupervised learning is a branch of machine learning where the algorithm identi
 ## Table of Contents
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [Unsupervised Learning Methods](#unsupervised-learning-methods)
   - [What is Unsupervised Learning?](#what-is-unsupervised-learning)
   - [K-Means Clustering](#k-means-clustering)
@@ -66,7 +65,8 @@ K-Means is an iterative clustering algorithm that partitions data into **k** clu
 - Works well for well-separated, spherical clusters.
 
 **Example K-Means Result:**
-![K-Means Clustering](Images/kmeans_clustering.png)
+
+<img src="https://github.com/21MN28/GEOL0069/blob/main/Images/kmeans_clustering.png?raw=true" width="500" height="400" /> 
 
 ### Gaussian Mixture Model (GMM)
 GMM is a probabilistic clustering technique that assumes data is generated from multiple Gaussian distributions, allowing for **soft clustering** where each point has a probability of belonging to multiple clusters.
@@ -84,18 +84,19 @@ GMM is a probabilistic clustering technique that assumes data is generated from 
 - Provides probability-based classification, reducing misclassification.
 
 **Example GMM Result:**
-![GMM Clustering](images/gmm_clustering.png)
+
+<img src="https://github.com/21MN28/GEOL0069/blob/main/Images/gmm_clustering.png?raw=true" width="500" height="400" /> 
 
 ## Sentinel-2 Image Classification
 ### K-Means Classification on Sentinel-2
 K-Means clustering was applied to **Sentinel-2 optical data** to classify different surface types. The data was reshaped and two clusters were defined for segmentation. The classification result is displayed below:
 
-![K-Means Sentinel-2](images/kmeans_sentinel2.png)
+<img src="https://github.com/21MN28/GEOL0069/blob/main/Images/kmeans_sentinel2.png?raw=true" width="500" height="400" /> 
 
 ### GMM Classification on Sentinel-2
 Gaussian Mixture Models (GMM) were applied to the same **Sentinel-2 dataset**, allowing for probabilistic classification of surface features. The result is shown below:
 
-![GMM Sentinel-2](images/gmm_sentinel2.png)
+<img src="https://github.com/21MN28/GEOL0069/blob/main/Images/gmm_sentinel2.png?raw=true" width="500" height="400" /> 
 
 ## Feature Comparison & Relationships
 Understanding feature distributions is critical for clustering evaluation. Below are scatter plots of key features used in classification.
@@ -106,12 +107,12 @@ The scatter plots below illustrate the relationships between different features 
 - **Backscatter coefficient (σ₀) vs Stack Standard Deviation (SSD)**
 - **Pulse Peakiness (PP) vs Stack Standard Deviation (SSD)**
 
-![K-Means Scatter](images/kmeans_scatter_plots.png)
+<img src="https://github.com/21MN28/GEOL0069/blob/main/Images/kmeans_scatter_plots.png?raw=true" /> 
 
 ### GMM Feature Relationships
 Similar feature comparisons for the **GMM clustering results** are shown below:
 
-![GMM Scatter](images/gmm_scatter_plots.png)
+<img src="https://github.com/21MN28/GEOL0069/blob/main/Images/gmm_scatter_plots.png?raw=true" /> 
 
 
 
@@ -120,11 +121,15 @@ Similar feature comparisons for the **GMM clustering results** are shown below:
 Waveform analysis was performed to evaluate how sea ice and leads differ in backscatter characteristics. The goal was to extract distinguishing features to enhance clustering accuracy.
 
 - **K-Means Mean and Standard Deviation:**
-  ![K-Means Waveform](images/kmeans_waveform.png)
+
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/kmeans_waveform.png?raw=true" />
+  
   *Mean and standard deviation of waveforms classified using K-Means, highlighting intensity variations between clusters.*
 
 - **GMM Mean and Standard Deviation:**
-  ![GMM Waveform](images/gmm_waveform.png)
+
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/gmm_waveform.png?raw=true" />
+  
   *Mean and standard deviation of waveforms classified using GMM, showing probabilistic cluster distributions.*
 
 ### Echo Classification
@@ -134,33 +139,39 @@ The classification of echoes helps assess differences in reflection intensity be
 Raw echo distributions were analyzed to observe how the clustering models separated different surface types.
 
 - **K-Means Echo Comparison:**
-  ![K-Means Echo](images/kmeans_echo.png)
+
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/kmeans_echo.png?raw=true" /> 
   *Comparison of raw echo intensities across all data points, classified leads, and classified sea ice using K-Means. Peaks indicate dominant signal responses.*
 
 - **GMM Echo Comparison:**
-  ![GMM Echo](images/gmm_echo.png)
+
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/gmm_echo.png?raw=true" /> 
   *Comparison of raw echo intensities across all data points, classified leads, and classified sea ice using GMM. Differences in peak structure highlight model variations.*
 
 #### Normalized Echoes
 To improve comparability, echoes were normalized to adjust for varying intensity scales.
 
 - **K-Means Normalized Echoes:**
-  ![K-Means Normalized Echo](images/kmeans_normalized_echo.png)
+
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/kmeans_normalized_echo.png?raw=true" /> 
   *Normalized waveform of echoes classified using K-Means, ensuring scale consistency for better pattern recognition.*
 
 - **GMM Normalized Echoes:**
-  ![GMM Normalized Echo](images/gmm_normalized_echo.png)
+  
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/gmm_normalized_echo.png?raw=true" /> 
   *Normalized waveform of echoes classified using GMM, reducing intensity distortions for clearer comparisons.*
 
 ### Waveform Alignment
 To account for shifts in waveforms due to sea ice movement, waveforms were aligned using cross-correlation. This ensures better clustering accuracy by aligning similar waveform features.
 
 - **K-Means Aligned Waveform:**
-  ![K-Means Aligned](images/kmeans_aligned.png)
+
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/kmeans_aligned.png?raw=true" /> 
   *Waveform alignment using cross-correlation for K-Means clustering, improving classification precision.*
 
 - **GMM Aligned Waveform:**
-  ![GMM Aligned](images/gmm_aligned.png)
+- 
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/gmm_aligned.png?raw=true" /> 
   *Waveform alignment using cross-correlation for GMM clustering, aligning signals to enhance feature matching.*
 
 
@@ -171,7 +182,8 @@ To evaluate the effectiveness of the clustering methods, the classification resu
 The confusion matrix below illustrates the agreement between both **K-Means** and **GMM** classifications and ESA reference labels.
 
 - **Confusion Matrix (K-Means & GMM vs. ESA):**
-  ![Confusion Matrix](images/confusion_matrix.png)
+
+  <img src="https://github.com/21MN28/GEOL0069/blob/main/Images/confusion_matrix.png?raw=true" /> 
   *Comparison of K-Means and GMM classification results with ESA data, highlighting correctly and incorrectly classified instances for both models.*
 
 ### Key Findings
