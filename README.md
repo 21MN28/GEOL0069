@@ -66,7 +66,7 @@ K-Means is an iterative clustering algorithm that partitions data into **k** clu
 - Works well for well-separated, spherical clusters.
 
 **Example K-Means Result:**
-![K-Means Clustering](images/kmeans_clustering.png)
+![K-Means Clustering](Images/kmeans_clustering.png)
 
 ### Gaussian Mixture Model (GMM)
 GMM is a probabilistic clustering technique that assumes data is generated from multiple Gaussian distributions, allowing for **soft clustering** where each point has a probability of belonging to multiple clusters.
