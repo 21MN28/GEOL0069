@@ -185,6 +185,6 @@ The confusion matrix below illustrates the agreement between both **K-Means** an
 
 ## Contact
 For questions or collaboration:
-**Your Name** - your.email@example.com
+**Maral** - zcqsnik@ucl.ac.uk
 
 
