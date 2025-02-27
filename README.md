@@ -197,6 +197,6 @@ The confusion matrix below illustrates the agreement between both **K-Means** an
 
 ## Contact
 For questions or collaboration:
-**Maral** - zcqsnik@ucl.ac.uk
+- **Maral** - zcqsnik@ucl.ac.uk
 
 
